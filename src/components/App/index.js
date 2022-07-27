@@ -4,6 +4,7 @@ import Container from '@mui/material/Container'
 
 import SearchPage from '../SearchPage'
 import SearchResults from '../SearchResults'
+// import Maps from '../Maps'
 
 const App = () => {
   let navigate = useNavigate()
@@ -28,6 +29,7 @@ const App = () => {
             />
           }
         >
+          {/* <Route path="/maps" element={<Maps />} /> */}
           <Route index element={<p>Enter a search to begin.</p>} />
           <Route path="/search/:queryText" element={<SearchResults />} />
         </Route>

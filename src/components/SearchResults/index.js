@@ -5,6 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
 import IconButton from '@mui/material/IconButton'
 import InfoIcon from '@mui/icons-material/Info'
+import { FLICKER_API_KEY } from '../DB'
 
 const SearchResults = () => {
   const params = useParams()
@@ -12,7 +13,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     fetch(
-      `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=7969583c40cc661ae7154305e0a487c2&text=${params.queryText}&format=json&nojsoncallback=1`
+      `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FLICKER_API_KEY}&text=${params.queryText}&format=json&nojsoncallback=1`
     )
       .then((res) => res.json())
       .then((data) => setData(data.photos.photo))

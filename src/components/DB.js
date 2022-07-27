@@ -1,1 +1,2 @@
 export const FLICKER_API_KEY = process.env.REACT_APP_FLICKER_API_KEY
+export const GOOGLE_API_SECRET = process.env.REACT_APP_FLICKER_API_SECRET
