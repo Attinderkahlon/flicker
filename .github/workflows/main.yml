@@ -3,7 +3,7 @@ name: Upload Website to S3
 on:
   push:
     branches:
-      - main
+      - attinderkahlon/flicker
 jobs:
   deploy:
     runs-on: ubuntu-latest
